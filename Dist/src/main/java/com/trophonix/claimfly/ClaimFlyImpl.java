@@ -199,4 +199,13 @@ public class ClaimFlyImpl extends JavaPlugin implements ClaimFly, Listener {
     return gamemode == GameMode.CREATIVE || gamemode == GameMode.SPECTATOR;
   }
 
+  @Override
+  public boolean isFreeWorld() {
+    return false;
+  }
+
+  @Override
+  public boolean isAdminClaims() {
+    return false;
+  }
 }

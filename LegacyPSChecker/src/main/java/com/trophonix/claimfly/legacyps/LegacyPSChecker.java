@@ -13,13 +13,13 @@ import org.bukkit.entity.Player;
 @RequiredArgsConstructor
 public class LegacyPSChecker implements ClaimChecker {
 
-  private final ClaimFly pl;
 
   @Override public boolean isInOwnClaim(Player player, org.bukkit.Location loc) {
     PlotPlayer pp = PlotPlayer.wrap(player);
     Plot plot = pp.getCurrentPlot();
     if (plot == null) return false;
     return plot.isOwner(player.getUniqueId());
+
   }
 
   @Override public boolean isInTrustedClaim(Player player, org.bukkit.Location loc) {
